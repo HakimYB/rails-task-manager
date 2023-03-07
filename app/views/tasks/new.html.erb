@@ -1,0 +1,13 @@
+<form>
+  <div class="container">
+    <%= form_with model: @task do |t| %>
+      <label> <%= t.label :title %> </label>
+      <%= t.text_field :title %>
+      <%= t.label :details %>
+      <%= t.text_field :details %>
+      <%= t.submit%>
+    <% end %>
+  </div>
+
+
+<%= link_to "All tasks", tasks_path, method: :get %>
